@@ -1,0 +1,195 @@
+/* RESET simples */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #222;
+  color: #fff;
+  position: relative;
+  z-index: 30;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* lista normal (desktop) */
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 8px;
+  font-size: 16px;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  margin: 4px 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Efeito de hover no botão hambúrguer */
+.menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+/* animação do ícone quando aberto */
+.menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* DRAWER lateral (menu mobile) */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 280px;
+  background: rgb(0, 0, 0, 0.87);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  padding: 64px 16px 16px;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.45);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.drawer a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.drawer a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* fundo escuro (overlay) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 35;
+}
+
+.menu-toggle.side-toggle {
+  position: fixed;
+  right: 7px;
+  top: 7px;
+  transform: none;
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  display: none; /* oculto por padrão */
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  z-index: 45;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.menu-toggle.side-toggle img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  filter: invert(1);
+}
+.menu-toggle.side-toggle:hover {
+  background-color: rgba(75, 75, 75, 0.85);
+}
+.menu-toggle.side-toggle:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+.menu-toggle.side-toggle.open {
+  background-color: #444;
+  transform: scale(0.98);
+}
+/* classes ativadas */
+.drawer.open {
+  transform: translateX(0);
+}
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .menu-toggle.side-toggle {
+    display: flex !important;
+  }
+  .navbar {
+    display: none !important;
+  }
+}
+
+/* Removido: agora o botão lateral aparece em telas <= 768px */
+
+/* conteúdo de exemplo */
+.demo-box {
+  height: 700px;
+  background: linear-gradient(180deg, #f5f5f5, #eaeaea);
+  padding: 24px;
+}
+
+
+.lorem {
+  padding: 20px;
+  width: 100%;
+}

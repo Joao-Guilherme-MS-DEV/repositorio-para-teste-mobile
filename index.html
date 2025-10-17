@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Responsivo</title>
+
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="brand">O Meu Site</div>
+
+      <!-- lista normal (desktop) -->
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+
+      <!-- botão hambúrguer (mobile) removido do header -->
+    </header>
+
+    <!-- botão lateral fixo (fora do header para posicionamento absoluto) -->
+    <button
+      class="menu-toggle side-toggle"
+      id="menuToggle"
+      aria-controls="mobileDrawer"
+      aria-expanded="false"
+      aria-label="Abrir menu"
+    >
+      <img src="list.svg" alt="Abrir menu" aria-hidden="true" />
+    </button>
+
+    <!-- fundo escuro quando o menu abre -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- menu lateral (drawer mobile) -->
+    <nav id="mobileDrawer" class="drawer" aria-hidden="true">
+      <a href="#">Home</a>
+      <a href="#">Sobre</a>
+      <a href="#">Serviços</a>
+      <a href="#">Contacto</a>
+    </nav>
+
+    <main>
+      <section class="demo-box">
+        <h2>Conteúdo de exemplo</h2>
+        <p>
+          Redimensiona a janela abaixo de 768px para ver o menu virar o botão hambúrguer.
+        </p>
+        <p class="lorem">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aliquam tempora reprehenderit labore sed excepturi aut a quibusdam corporis fugiat. Facilis, laboriosam nobis. Fugiat voluptates harum libero eaque dignissimos asperiores.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit exercitationem fugiat laboriosam alias? Assumenda illo vel commodi maxime culpa? Obcaecati tempora, dignissimos illo voluptatem deserunt dolor placeat mollitia molestiae!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque autem quos aliquam. Omnis officia cupiditate sunt aut minima in ratione illo facere corporis nam, provident quod, perferendis eum, eius animi.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aliquam tempora reprehenderit labore sed excepturi aut a quibusdam corporis fugiat. Facilis, laboriosam nobis. Fugiat voluptates harum libero eaque dignissimos asperiores.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit exercitationem fugiat laboriosam alias? Assumenda illo vel commodi maxime culpa? Obcaecati tempora, dignissimos illo voluptatem deserunt dolor placeat mollitia molestiae!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque autem quos aliquam. Omnis officia cupiditate sunt aut minima in ratione illo facere corporis nam, provident quod, perferendis eum, eius animi.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aliquam tempora reprehenderit labore sed excepturi aut a quibusdam corporis fugiat. Facilis, laboriosam nobis. Fugiat voluptates harum libero eaque dignissimos asperiores.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit exercitationem fugiat laboriosam alias? Assumenda illo vel commodi maxime culpa? Obcaecati tempora, dignissimos illo voluptatem deserunt dolor placeat mollitia molestiae!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque autem quos aliquam. Omnis officia cupiditate sunt aut minima in ratione illo facere corporis nam, provident quod, perferendis eum, eius animi.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aliquam tempora reprehenderit labore sed excepturi aut a quibusdam corporis fugiat. Facilis, laboriosam nobis. Fugiat voluptates harum libero eaque dignissimos asperiores.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit exercitationem fugiat laboriosam alias? Assumenda illo vel commodi maxime culpa? Obcaecati tempora, dignissimos illo voluptatem deserunt dolor placeat mollitia molestiae!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque autem quos aliquam. Omnis officia cupiditate sunt aut minima in ratione illo facere corporis nam, provident quod, perferendis eum, eius animi.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aliquam tempora reprehenderit labore sed excepturi aut a quibusdam corporis fugiat. Facilis, laboriosam nobis. Fugiat voluptates harum libero eaque dignissimos asperiores.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit exercitationem fugiat laboriosam alias? Assumenda illo vel commodi maxime culpa? Obcaecati tempora, dignissimos illo voluptatem deserunt dolor placeat mollitia molestiae!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque autem quos aliquam. Omnis officia cupiditate sunt aut minima in ratione illo facere corporis nam, provident quod, perferendis eum, eius animi.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aliquam tempora reprehenderit labore sed excepturi aut a quibusdam corporis fugiat. Facilis, laboriosam nobis. Fugiat voluptates harum libero eaque dignissimos asperiores.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit exercitationem fugiat laboriosam alias? Assumenda illo vel commodi maxime culpa? Obcaecati tempora, dignissimos illo voluptatem deserunt dolor placeat mollitia molestiae!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque autem quos aliquam. Omnis officia cupiditate sunt aut minima in ratione illo facere corporis nam, provident quod, perferendis eum, eius animi.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aliquam tempora reprehenderit labore sed excepturi aut a quibusdam corporis fugiat. Facilis, laboriosam nobis. Fugiat voluptates harum libero eaque dignissimos asperiores.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit exercitationem fugiat laboriosam alias? Assumenda illo vel commodi maxime culpa? Obcaecati tempora, dignissimos illo voluptatem deserunt dolor placeat mollitia molestiae!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque autem quos aliquam. Omnis officia cupiditate sunt aut minima in ratione illo facere corporis nam, provident quod, perferendis eum, eius animi.
+        </p>
+      </section>
+    </main>
+
+    <!-- Ligação ao JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
